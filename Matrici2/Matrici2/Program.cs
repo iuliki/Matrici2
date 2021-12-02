@@ -9,9 +9,8 @@ namespace Matrici2
             Console.WriteLine("Hello World!");
             int[,] matrix1 = ReadMatrix();
             PrintMatrix(matrix1);
-            Console.WriteLine("Randul de pe care vrea sa se faca suma: ");
-            int R = Console.Read();
-            SumaRand(matrix1,R);
+            
+            SumaRand(matrix1);
            
         }
         public static class ConsoleHelper
@@ -79,9 +78,9 @@ namespace Matrici2
             }
         }
 
-        public static void SumaRand(int[,] matrix, int R )
+        public static void SumaRand(int[,] matrix )
         {
-            
+            int R = ConsoleHelper.ReadNumber("R ",1,0);
             int suma=0;
             int colsCount2 = matrix.GetLength(1);
             for (int col = 0; col < colsCount2; col++)
